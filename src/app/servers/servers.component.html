@@ -1,13 +1,13 @@
 <label for="serverName">Server Name</label>
-<input
+<!-- <input
 type="text"
 class="form-control"
-(input)="onUpdateServerName($event)">
+(input)="onUpdateServerName($event)"> -->
 <input
 type="text"
+id="serverName"
 class="form-control"
 [(ngModel)]="serverName">
-<p>{{serverName}}</p>
 <button class="btn btn-primary"
 [disabled]="!allowNewServer"
 (click)="onCreateServer()">Add Server</button>
@@ -15,3 +15,11 @@ class="form-control"
 <p>{{serverCreationStatus}}</p>
 <app-server></app-server>
 <app-server></app-server>
+<input
+type="text"
+class="form-control"
+[(ngModel)]="userName">
+<button class="btn btn-primary"
+[disabled]="!userName.length"
+(click)="onCreateUser()">Add User</button>
+<p>{{userCreationStatus}}</p>
